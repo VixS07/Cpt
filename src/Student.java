@@ -1,14 +1,40 @@
-import java.util.Scanner;
 
-/**
- * author: Vix
- * date: 01/10/2025
- * Binary Search + a game
- */
+import java.util.LinkedList;
 
- public class Student{
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        
+public class Student {
+    // Variables
+    private int id;
+    private String name;
+    private int age;
+    private LinkedList<Double> grades;
+
+    public Student(int id, String name, int age) { // setter
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.grades = new LinkedList<>();
     }
- }
+
+    // Getters
+
+    public double addGrade(double grade) {
+        grades.add(grade);
+        return grade;
+    }  
+
+    public int getId(){
+        return id;
+    }
+
+    public int getAge(){
+        return age;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public LinkedList<Double> getGrades(){
+        return grades;
+    }
+}

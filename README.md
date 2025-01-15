@@ -1,10 +1,7 @@
-# This is the title of the README (the app name)
-description of the project maybe?
+# Student Information Organization System
+this app is made as a way for teachers to organize and acess their studetns infromation all in one place.
 
-1. List of things
-1. Another one
-1. Another one
-
+1. 
 - Bullet points
 - more of them
 

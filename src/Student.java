@@ -37,4 +37,9 @@ public class Student {
     public LinkedList<Double> getGrades(){
         return grades;
     }
+
+    @Override
+    public String toString() {
+        return "ID: " + id + ", Name: " + name + ", Age: " + age + ", Grades: " + grades;
+    } 
 }

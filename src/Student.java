@@ -7,7 +7,12 @@ public class Student {
     private String name;
     private int age;
     private LinkedList<Double> grades;
-
+    /**
+     * 
+     * @param id
+     * @param name
+     * @param age
+     */
     public Student(int id, String name, int age) { // setter
         this.id = id;
         this.name = name;

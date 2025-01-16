@@ -1,6 +1,9 @@
 
 import java.util.*;
-
+/**
+ * @author: Vix
+ * @date: 01/06/2025
+ */
 public class StudentData {
     // Variables  
     private static LinkedList<Student> students;
@@ -21,15 +24,23 @@ public class StudentData {
         return operations;
     }
 
-    public static Student addStudent(Scanner scanner){
+    public static Student addStudent(Scanner scanner) {
         System.out.println("You are about to enter in a new student");
-        System.out.println("Please input the students name: ");
+        System.out.println("Please input the student's name: ");
         String name = scanner.nextLine();
-        scanner.nextLine(); //consumes next line
-        System.out.println("Please enter students ID numbner (a unique number up to 10 digits): ");
-        int id = scanner.nextInt();
-        scanner.nextLine(); // consumes the next line
-        System.out.println("Please enter students age: ");
+        scanner.nextLine(); // consumes next line
+        int id;
+        while (true) {
+            System.out.println("Please enter student's ID number (a unique number up to 10 digits): ");
+            String idInput = scanner.nextLine();
+            if (idInput.length() <= 10 && idInput.matches("\\d+")) { // I asked ai to help with the looping
+                id = Integer.parseInt(idInput);
+                break;
+            } else {
+                System.out.println("Invalid input. Please enter a numeric ID up to 10 digits long.");
+            }
+        }
+        System.out.println("Please enter student's age: ");
         int age = scanner.nextInt();
         scanner.nextLine(); // consumes the next line
         Student newStudent = new Student(id, name, age);
@@ -38,6 +49,7 @@ public class StudentData {
         operations.push("addStudent");
         return newStudent;
     }
+    
 
     public static boolean addGrade(Scanner scanner){
         System.out.println("You are about to add a grade for a student.");
